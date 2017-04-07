@@ -19,4 +19,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^constellations/', include('constellations.urls')),
     url(r'^admin/', admin.site.urls),
+
+    url(r'^api/v1/constellations/', include('constellations.api_urls')),
 ]
