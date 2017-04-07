@@ -1,0 +1,6 @@
+<h1>{{ constellation.abbreviation }}</h1>
+<ul>
+{% for star in constellation.star_set.all %}
+    <li>{{ star.get_name }}</li>
+{% endfor %}
+</ul>

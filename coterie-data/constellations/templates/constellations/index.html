@@ -1,0 +1,13 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'constellations/style.css' %}" />
+
+{% if constellations %}
+    <ul>
+    {% for c in constellations %}
+        <li><a href="{% url 'constellations:detail' c.id %}">{{ c.abbreviation }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Looks cloudy</p>
+{% endif %}
