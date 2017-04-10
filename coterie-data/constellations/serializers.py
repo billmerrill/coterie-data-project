@@ -6,3 +6,4 @@ class ConstellationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Constellation
         fields = ('id', 'abbreviation')
+        lookup_field = 'abbreviation'
